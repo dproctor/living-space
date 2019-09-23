@@ -1,0 +1,45 @@
+{
+  "name": "living-space",
+  "version": "1.0.0",
+  "description": "Where is everyone?",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dproctor/living-space.git"
+  },
+  "author": "Devon Proctor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dproctor/living-space/issues"
+  },
+  "homepage": "https://dproctor.github.io/living-space",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.5.5",
+    "@mapbox/mapbox-gl-draw": "^1.1.2",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^10.0.0",
+    "browserify-css": "^0.15.0",
+    "envify": "^4.1.0",
+    "factor-bundle": "^2.5.0",
+    "gh-pages": "^2.1.1",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^5.3.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "mapbox-gl": "^1.3.0",
+    "mapbox-gl-draw-circle": "^1.1.1",
+    "serve-static": "^1.14.1",
+    "webpack": "^4.40.2"
+  }
+}
