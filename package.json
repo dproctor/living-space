@@ -26,6 +26,9 @@
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.5.5",
     "@mapbox/mapbox-gl-draw": "^1.1.2",
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
+    "babel-eslint": "^8.2.6",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
@@ -37,9 +40,11 @@
     "grunt": "^0.4.5",
     "grunt-browserify": "^5.3.0",
     "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-uglify-es": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
     "mapbox-gl": "^1.3.0",
     "mapbox-gl-draw-circle": "^1.1.1",
     "serve-static": "^1.14.1",
+    "typescript": "^3.6.3",
     "webpack": "^4.40.2"
   }
 }
