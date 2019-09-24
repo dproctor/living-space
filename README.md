@@ -24,6 +24,3 @@ distribution.
   - Google form writes to a sheet
 - Hosting
   - Github pages on devonproctor.com/living-space
-
-TODO:
-	- Use Grunt to build Node javascript
