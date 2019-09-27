@@ -16,6 +16,7 @@ from __future__ import print_function
 import argparse
 import csv
 import itertools
+import re
 import sys
 from functools import partial
 from io import StringIO
@@ -70,6 +71,12 @@ def main(arguments):
                         help="Google Sheets url",
                         type=str,
                         required=True)
+    parser.add_argument('--from_email',
+                        help="Only output guesses from specified person",
+                        type=str)
+    parser.add_argument('--for_name',
+                        help="Only output guesses for specified person",
+                        type=str)
 
     args = parser.parse_args(arguments)
 
@@ -86,7 +93,15 @@ def main(arguments):
 
     circles = []
     for i, email in enumerate(data['Email']):
-        circles.extend([_circle_kml(email, name, data, i) for name in NAMES])
+        for name in NAMES:
+            if args.from_email:
+                if not re.search(args.from_email, email):
+                    continue
+            if args.for_name:
+                if not re.search(args.for_name, name):
+                    continue
+            circles.append(_circle_kml(email, name, data, i))
+
     print(
         KML_TEMPLATE.format(
             "\n".join([
